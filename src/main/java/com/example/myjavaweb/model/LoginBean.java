@@ -1,9 +1,11 @@
-package com.example.myjavaweb;
+package com.example.myjavaweb.model;
+
+import com.example.myjavaweb.ConnectionDB;
 
 import java.sql.SQLException;
 import java.sql.*;
 
-public class LoginBean implements LoginDAO{
+public class LoginBean implements LoginDAO {
     private static final Connection connection;
 
     static {

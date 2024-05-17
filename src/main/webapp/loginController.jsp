@@ -1,4 +1,4 @@
-<%@ page import="com.example.myjavaweb.LoginBean" %>
+<%@ page import="com.example.myjavaweb.model.LoginBean" %>
 <%@ page import="entity.Users" %><%--
   Created by IntelliJ IDEA.
   User: phuch
