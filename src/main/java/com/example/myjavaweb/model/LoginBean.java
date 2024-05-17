@@ -1,7 +1,5 @@
 package com.example.myjavaweb.model;
 
-import com.example.myjavaweb.ConnectionDB;
-
 import java.sql.SQLException;
 import java.sql.*;
 

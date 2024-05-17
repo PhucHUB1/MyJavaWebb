@@ -1,4 +1,4 @@
-package com.example.myjavaweb;
+package com.example.myjavaweb.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
