@@ -20,7 +20,7 @@ public class LoginController extends HelloServlet {
            //nhan du  lieu tu form :  step 1
            String username = req.getParameter("username");
            String password = req.getParameter("password");
-
+///
            //step 2
         LoginBean loginBean = new LoginBean();
         try {
