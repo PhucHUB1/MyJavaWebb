@@ -9,8 +9,9 @@ public class ConnectionDB {
     public static Connection getMySQLConnection() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection connection = null;
+
         //Connection string: Chuoi ket noi den csdl
-        String connectionURL = "jdbc:mysql://localhost:3306/pizza";
+        String connectionURL = "jdbc:mysql://app-db:3306/pizza";
         connection = DriverManager.getConnection(connectionURL, "root", "pizza");
 
         return connection;

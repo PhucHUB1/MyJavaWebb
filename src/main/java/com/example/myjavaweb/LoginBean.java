@@ -17,21 +17,13 @@ public class LoginBean implements LoginDAO{
     private Statement statement = null;
 
     @Override
-    public boolean checkLoginStatement(String username, String password) throws SQLException {
-        //Query
-        String query = "select username from users where username like '"+username+"' and password like '"+password+"'";
-
-        //Tạo statement mỗi lần thực thi
-        statement = connection.createStatement();
-
-        //Tạo đối tượng ResultSet để nhận kết quả từ database trả về
-        ResultSet resultSet = statement.executeQuery(query);
-
-
-        if (resultSet.next()) {
-            System.out.println("Username is: " + resultSet.getString("username"));
-        }
-
-        return false;
+    public boolean checkLogin(String username, String password) throws SQLException {
+        //Dung prepare statement
+        String sql = "select * from pizza.user_info where Name=? and Password=?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, username);
+        ps.setString(2, password);
+        ResultSet rs = ps.executeQuery();
+        return rs.next();
     }
 }

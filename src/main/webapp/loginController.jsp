@@ -19,7 +19,7 @@
 
     //Step2: Call instance of JavaBean(Model)
     LoginBean loginBean = new LoginBean();
-    boolean status = loginBean.checkLoginStatement(username,password);
+    boolean status = loginBean.checkLogin(username,password);
     if (status) {
 %>
 
